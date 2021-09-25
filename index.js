@@ -89,7 +89,7 @@ const uploadFile = () => {
 
     xhr.open("POST", uploadURL,true);
     xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-    xhr.setRequestHeader('Content-Type', 'application/xml');
+    xhr.setRequestHeader('Content-Type', 'text/html');
     xhr.send(formData);
 };
 
