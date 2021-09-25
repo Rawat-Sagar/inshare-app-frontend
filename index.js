@@ -87,7 +87,9 @@ const uploadFile = () => {
         fileInput.value = ""; // reset the input
     };
 
-    xhr.open("POST", uploadURL);
+    xhr.open("POST", uploadURL,true);
+    xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
+    xhr.setRequestHeader('Content-Type', 'application/xml');
     xhr.send(formData);
 };
 
