@@ -10,7 +10,8 @@ const fileURLInput = document.querySelector("#fileURL")
 const sharingContainer = document.querySelector(".sharing-container");
 const copyURLBtn = document.querySelector("#copyURLBtn");
 const toast = document.querySelector(".toast");
-const host = "htpps://cors-anywhere.herokuapp.com/https://inshare-app-backend.herokuapp.com/";
+const host = "https://inshare-app-backend.herokuapp.com/";
+const cors = "htpps://cors-anywhere.herokuapp.com/";
 const uploadURL = `${host}api/files`;
 
 const maxAllowedSize = 100 * 1024 * 1024; //100mb
@@ -87,7 +88,7 @@ const uploadFile = () => {
         fileInput.value = ""; // reset the input
     };
 
-    xhr.open("POST", uploadURL,true);
+    xhr.open("POST", "htpps://cors-anywhere.herokuapp.com/${uploadURL}");
     xhr.send(formData);
 };
 
